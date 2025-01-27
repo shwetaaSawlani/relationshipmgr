@@ -1,0 +1,13 @@
+[
+  {"_dataType": "demo" },
+  {
+    "_entity": "moqui.Assignment.Party",
+    "partyId": "PER123",
+    "partyTypeId": "Person"
+  },
+  {
+    "_entity": "moqui.Assignment.Party",
+    "partyId": "ORG456",
+    "partyTypeId": "Organization"
+  }
+]

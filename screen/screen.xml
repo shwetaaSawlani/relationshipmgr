@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
+        require-authentication="anonymous-all">
+    <transition name="CreateParty">
+        <service-call name="create#Party"/>
+        <default-response url="."/>
+    </transition>
+
+    <transition name="CreateContactMech">
+        <service-call name="create#ContactMech"/>
+        <default-response url="."/>
+    </transition>
+    <transition name="Person">
+        <service-call name="create#Person"/>
+        <default-response url="."/>
+    </transition>
+    <transition name="Organization">
+        <service-call name="create#Organization"/>
+        <default-response url="."/>
+    </transition>
+    <transition name="PartyRole">
+        <service-call name="create#PartyRole"/>
+        <default-response url="."/>
+    </transition>
+
+
+    <widgets>
+        <label type="h1" text="Hello world!"/>
+        <container-dialog id="Party" button-text="Create Party">
+            <form-single name="Party" transition="CreateParty">
+                <auto-fields-entity entity-name="moqui.Assignment.Party" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
+        <container-dialog id="CreateContactMech" button-text="Create ContactMech">
+            <form-single name="CreateContactMech" transition="CreateContactMech">
+                <auto-fields-entity entity-name="moqui.Assignment.ContactMech" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
+        <container-dialog id="CreatePerson" button-text="Create Person">
+            <form-single name="Person" transition="Person">
+                <auto-fields-entity entity-name="moqui.Assignment.Person" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
+        <container-dialog id="CreateOrganization" button-text="Create Organization">
+            <form-single name="Organization" transition="Organization">
+                <auto-fields-entity entity-name="moqui.Assignment.Organization" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
+        <container-dialog id="CreatePartyRole" button-text="Create PartyRole">
+            <form-single name="PartyRole" transition="PartyRole">
+                <auto-fields-entity entity-name="moqui.Assignment.PartyRole" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
+
+    </widgets>
+</screen>
