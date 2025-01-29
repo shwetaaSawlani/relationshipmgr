@@ -21,10 +21,6 @@
             <moqui.basic.Enumeration description="Person" enumId="Person" enumTypeId="PartyType" />
             <moqui.basic.Enumeration description="Organization" enumId="Organization" enumTypeId="PartyType" />
         </seed-data>
-
-        <master name="default" >
-            <detail relationship="pt"/>
-        </master>
     </entity>
 
 
