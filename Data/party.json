@@ -1,5 +1,6 @@
 [
-  {"_dataType": "demo" },
+  {"_dataType": "demo"},
+
   {
     "_entity": "moqui.Assignment.Party",
     "partyId": "PER123",
@@ -9,5 +10,75 @@
     "_entity": "moqui.Assignment.Party",
     "partyId": "ORG456",
     "partyTypeId": "Organization"
+  },
+
+  {
+    "_entity": "moqui.Assignment.Person",
+    "partyId": "PER123",
+    "firstName": "John",
+    "lastName": "Doe",
+    "birthDate": "1990-05-15"
+  },
+
+  {
+    "_entity": "moqui.Assignment.Organization",
+    "partyId": "ORG456",
+    "organizationName": "Tech Solutions Inc."
+  },
+
+  {
+    "_entity": "moqui.Assignment.PartyRole",
+    "partyId": "PER123",
+    "roleTypeId": "Agent"
+  },
+  {
+    "_entity": "moqui.Assignment.PartyRole",
+    "partyId": "ORG456",
+    "roleTypeId": "Distributor"
+  },
+
+  {
+    "_entity": "moqui.Assignment.ContactMech",
+    "contactMechId": "CM001",
+    "contactMechTypeEnumId": "TelecomNumber"
+  },
+  {
+    "_entity": "moqui.Assignment.ContactMech",
+    "contactMechId": "CM002",
+    "contactMechTypeEnumId": "PostalAddress"
+  },
+
+  {
+    "_entity": "moqui.Assignment.PartyContactMech",
+    "partyId": "PER123",
+    "contactMechId": "CM001",
+    "contactMechPurposeId": "Work",
+    "fromDate": "2025-01-01"
+  },
+  {
+    "_entity": "moqui.Assignment.PartyContactMech",
+    "partyId": "ORG456",
+    "contactMechId": "CM002",
+    "contactMechPurposeId": "Office",
+    "fromDate": "2025-01-01"
+  },
+
+  {
+    "_entity": "moqui.Assignment.TelecomNumber",
+    "contactMechId": "CM001",
+    "countrycode": "1",
+    "areacode": 123,
+    "contactNumber": 4567890
+  },
+
+  {
+    "_entity": "moqui.Assignment.PostalAddress",
+    "contactMechId": "CM002",
+    "toName": "Jane Doe",
+    "attnName": "Accounts Department",
+    "address1": "123 Elm Street",
+    "address2": "Suite 400",
+    "city": "indore",
+    "postalCode": "54321"
   }
 ]
